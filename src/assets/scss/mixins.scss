@@ -1,0 +1,69 @@
+@import '@/assets/scss/variable.scss';
+
+@mixin flex-space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin msg-item {
+  margin-bottom: 24px;
+  p {
+    margin: 0px;
+  }
+  .left-info {
+    color: $color-msg--left-info;
+  }
+  .right-info {
+    color: $color-msg--right-info;
+  }
+  .topic {
+    margin-right: 16px;
+  }
+  .payload {
+    display: inline-block;
+    min-height: 41px;
+    max-width: 800px;
+    min-width: 20px;
+    margin: 10px 0;
+    padding: 10px;
+    white-space: normal;
+    word-break: break-all;
+    pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+  }
+  .time {
+    color: $color-font-black-time;
+  }
+}
+
+@mixin connection-status {
+  .connection-status {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: $color-bg--second-status;
+    margin-right: 8px;
+    &.online {
+      background: $color-main-bluegrey;
+    }
+  }
+}
+
+@mixin top-bar {
+  .top-bar {
+    position: fixed;
+    left: $width-leftbar;
+    right: 0;
+    top: 0;
+    z-index: 3;
+    padding: 0 $spacing--connection-details;
+    height: auto;
+    line-height: $height--connection-topbar;
+    border-bottom: 1px solid $color-border--black;
+    background-color: #fff;
+  }
+}
